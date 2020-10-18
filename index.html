@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Homepage Clone</title>
+
+    <link rel="icon" type="image/png" href="googlehimg.png">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: arial, sans-serif;
+        }
+        html, body{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        @media only screen and (max-width: 600px) {
+            #navbar {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            #navbar a {
+                text-decoration: none;
+                color: black;
+                margin-right: 20px;
+                margin-top: 15px;
+            }
+
+            #navbar a:hover {
+                text-decoration: underline;
+                color: darkgrey;
+            }
+
+            #navbar img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-top: 15px;
+                margin-right: 15px;
+            }
+
+            #logo {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 110px;
+            }
+
+            #searchbar {
+                text-align: center;
+                margin-top: 27px;
+                padding-top: 0px;
+            }
+
+            #search {
+                font-size: 16px;
+                width: 340px;
+                padding-left: 42px;
+                border-radius: 30px;
+                border: 1px solid #c4c4c4;
+                outline: 0;
+                height: 45px;
+                border-color: lightgrey;
+                flex-grow: 2;
+            }
+
+            #search:hover {
+                box-shadow: 0 0 2px 1px #c4c4c4;
+                border: 1px solid #eee;
+            }
+
+            #buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 25px;
+            }
+
+            #btn1:hover {
+                cursor: pointer;
+                border-color: lightgrey;
+                border-radius: 5px;
+
+            }
+
+            #btn2:hover {
+                cursor: pointer;
+                border-color: lightgrey;
+                border-radius: 5px;
+
+            }
+
+            #btn1 {
+                margin-right: 10px;
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+                background-color: rgb(247, 247, 247);
+                border-color: white;
+            }
+
+            #btn2 {
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+                background-color: rgb(247, 247, 247);
+
+
+            }
+
+            #last {
+                margin-top: 25px;
+                text-align: center;
+            }
+
+            #last a {
+                text-decoration: none;
+            }
+            #footer{
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                
+            }
+            #foot {
+                text-align: center;
+                border: 1px solid lightgrey;
+                background-color: lightgrey;
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                line-height: 1.7;
+                align-self: flex-end;
+            }
+
+        }
+
+        @media only screen and (min-width: 600px) {
+            #navbar {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            #navbar a {
+                text-decoration: none;
+                color: black;
+                margin-right: 20px;
+                margin-top: 15px;
+            }
+
+            #navbar a:hover {
+                text-decoration: underline;
+                color: darkgrey;
+            }
+
+            #navbar img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-top: 15px;
+                margin-right: 5px;
+            }
+
+            #logo {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 110px;
+            }
+
+            #searchbar {
+                text-align: center;
+                margin-top: 27px;
+                padding-top: 0px;
+            }
+
+            #search {
+                font-size: 16px;
+                width: 447px;
+                padding-left: 42px;
+                border-radius: 30px;
+                border: 1px solid #c4c4c4;
+                outline: 0;
+                height: 45px;
+                border-color: lightgrey;
+                flex-grow: 2;
+            }
+
+            #search:hover {
+                box-shadow: 0 0 2px 1px #c4c4c4;
+                border: 1px solid #eee;
+            }
+
+            #buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 25px;
+            }
+
+            #btn1:hover {
+                cursor: pointer;
+                border-color: lightgrey;
+                border-radius: 5px;
+
+            }
+
+            #btn2:hover {
+                cursor: pointer;
+                border-color: lightgrey;
+                border-radius: 5px;
+
+            }
+
+            #btn1 {
+                margin-right: 10px;
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+                background-color: rgb(247, 247, 247);
+            }
+
+            #btn2 {
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+                background-color: rgb(247, 247, 247);
+
+            }
+
+            #last {
+                margin-top: 25px;
+                text-align: center;
+            }
+
+            #last a {
+                text-decoration: none;
+            }
+            #footer{
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                
+            }
+            #footer{
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                
+            }
+            #foot {
+                text-align: center;
+                border: 1px solid lightgrey;
+                background-color: lightgrey;
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                line-height: 1.7;
+                align-self: flex-end;
+            }
+
+
+
+        }
+
+        @media only screen and (min-width: 992px) {
+            #navbar {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            #navbar a {
+                text-decoration: none;
+                color: black;
+                margin-right: 20px;
+                margin-top: 15px;
+            }
+
+            #navbar a:hover {
+                text-decoration: underline;
+                color: darkgrey;
+            }
+
+            #navbar img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-top: 15px;
+                margin-right: 5px;
+            }
+
+            #logo {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 110px;
+            }
+
+            #searchbar {
+                text-align: center;
+                margin-top: 27px;
+                padding-top: 0px;
+            }
+
+            #search {
+                font-size: 16px;
+                width: 447px;
+                padding-left: 45px;
+                border-radius: 30px;
+                border: 1px solid #c4c4c4;
+                outline: 0;
+                height: 45px;
+                border-color: lightgrey;
+                flex-grow: 2;
+            }
+
+            #search:hover {
+                box-shadow: 0 0 2px 1px #c4c4c4;
+                border: 1px solid #eee;
+            }
+
+            #buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 25px;
+            }
+
+            #btn1:hover {
+                cursor: pointer;
+                border-color: lightgrey;
+                border-radius: 5px;
+
+            }
+
+            #btn2:hover {
+                cursor: pointer;
+                border-color: lightgrey;
+                border-radius: 5px;
+
+            }
+
+            #btn1 {
+                margin-right: 10px;
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+                background-color: rgb(247, 247, 247);
+            }
+
+            #btn2 {
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+                background-color: rgb(247, 247, 247);
+            }
+
+            #last {
+                margin-top: 25px;
+                text-align: center;
+            }
+
+            #last a {
+                text-decoration: none;
+            }
+
+            #footer{
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                
+            }
+            #foot {
+                text-align: center;
+                border: 1px solid lightgrey;
+                background-color: lightgrey;
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                line-height: 1.7;
+                align-self: flex-end;
+            }
+
+        }
+
+        @media only screen and (min-width: 768px) {
+            #navbar {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            #navbar a {
+                text-decoration: none;
+                color: black;
+                margin-right: 20px;
+                margin-top: 15px;
+            }
+
+            #navbar a:hover {
+                text-decoration: underline;
+                color: darkgrey;
+            }
+
+            #navbar img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-top: 15px;
+                margin-right: 5px;
+            }
+
+            #logo {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 110px;
+            }
+
+            #searchbar {
+                text-align: center;
+                margin-top: 27px;
+                padding-top: 0px;
+            }
+
+            #search {
+                font-size: 16px;
+                width: 580px;
+                padding-left: 42px;
+                border-radius: 30px;
+                border: 1px solid #c4c4c4;
+                outline: 0;
+                height: 45px;
+                border-color: lightgrey;
+                flex-grow: 2;
+            }
+
+            #search:hover {
+                box-shadow: 0 0 2px 1px #c4c4c4;
+                border: 1px solid #eee;
+            }
+
+            #buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 25px;
+            }
+
+            #btn1:hover {
+                cursor: pointer;
+                border-color: lightgrey;
+                border-radius: 5px;
+
+            }
+
+            #btn2:hover {
+                cursor: pointer;
+                border-color: lightgrey;
+                border-radius: 5px;
+
+            }
+
+            #btn1 {
+                margin-right: 10px;
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+                background-color: rgb(247, 247, 247);
+            }
+
+            #btn2 {
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+                background-color: rgb(247, 247, 247);
+
+            }
+
+            #last {
+                margin-top: 25px;
+                text-align: center;
+            }
+
+            #last a {
+                text-decoration: none;
+            }
+
+            #footer{
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                
+            }
+            #foot {
+                text-align: center;
+                border: 1px solid lightgrey;
+                background-color: lightgrey;
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                line-height: 1.7;
+                align-self: flex-end;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="https://www.google.com/intl/en-GB/gmail/about/#">Gmail</a>
+        <a href="https://www.google.co.in/imghp?hl=en&tab=wi&ogbl">Images</a>
+        <img src="img.png">
+    </div>
+
+    <div id="logo">
+        <img src="googlelogo.png" alt="Google">
+    </div>
+
+    <div id="searchbar">
+
+        <input type="search" id="search" placeholder="Search Google or type an URL">
+
+    </div>
+
+
+    <div id="buttons">
+        <button type="button" id="btn1">Google Search
+            <button type="button" id="btn2">I'm Feeling Lucky
+    </div>
+    <div id="last">
+        <p>Google offered in: <a href=""> हिन्दी</a> &nbsp;&nbsp;<a href="">मराठी</a> &nbsp;&nbsp;<a href="">ગુજરાતી</a>
+            &nbsp;&nbsp;<a href="">ਪੰਜਾਬੀ</a></p>
+    </div>
+    <div id="footer">
+     <div id="foot">
+        India<br>Made by <b>Henil Modi</b>
+    </div>
+    </div>
+
+</body>
+
+</html>
